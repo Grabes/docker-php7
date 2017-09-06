@@ -1,8 +1,8 @@
-# PHP 7 docker image
+# PHP-FPM 7.1 docker image
 
-This is a [Docker](http://www.docker.com) image for [PHP 7](http://php.net/) suited to run Laravel and Wordpress.
+This is a [Docker](http://www.docker.com) image for [PHP 7.1](http://php.net/) suited to run Laravel and Wordpress.
 
-An automated build for this repo is available on the [Docker Hub](https://registry.hub.docker.com/u/egraber/php7-fpm/).
+An automated build for this repo is available on the [Docker Hub](https://hub.docker.com/r/egraber/php-fpm-7.1/).
 
 ---
 
