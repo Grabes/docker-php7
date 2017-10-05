@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
 	wget \
 	libxml2-dev \
 	ssmtp \
-    vim
+  vim
 
 
 RUN docker-php-ext-install pcntl && \
