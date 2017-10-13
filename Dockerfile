@@ -17,6 +17,14 @@ RUN docker-php-ext-install pcntl && \
 		docker-php-ext-install soap
 RUN echo "mailhub=mailcatcher:1025\nUseTLS=NO\nFromLineOverride=YES" > /etc/ssmtp/ssmtp.conf
 
+COPY ./aliases.sh /root/aliases.sh
+RUN echo "" >> ~/.bashrc && \
+    echo "# Load Custom Aliases" >> ~/.bashrc && \
+    echo "source /root/aliases.sh" >> ~/.bashrc && \
+	echo "" >> ~/.bashrc && \
+	sed -i 's/\r//' /root/aliases.sh && \
+	sed -i 's/^#! \/bin\/sh/#! \/bin\/bash/' /root/aliases.sh
+
 CMD ["php-fpm"]
 
 EXPOSE 9000
