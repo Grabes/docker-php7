@@ -53,6 +53,13 @@ RUN if [ ${INSTALL_DUSK_DEPS} = true ]; then \
   && rm chromedriver_linux64.zip \
 ;fi
 
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
+apt-get install -yq nodejs build-essential
+
+RUN npm install -g npm
+
+RUN npm install -g yarn
+
 CMD ["php-fpm"]
 
 EXPOSE 9000
